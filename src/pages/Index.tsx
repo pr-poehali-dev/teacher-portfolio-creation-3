@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const TEACHER_PHOTO = "https://cdn.poehali.dev/projects/6f969e72-c557-47bc-ba79-e3eb6c789a9d/files/7a1ffd62-5e93-470a-984d-5e926c6a5aa1.jpg";
+const TEACHER_PHOTO = "https://cdn.poehali.dev/projects/6f969e72-c557-47bc-ba79-e3eb6c789a9d/bucket/618be2d2-66a6-48fe-8046-38cde75db348.jpg";
 
 const achievements = [
   {
