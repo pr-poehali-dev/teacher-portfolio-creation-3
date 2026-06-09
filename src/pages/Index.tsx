@@ -69,6 +69,19 @@ const achievements = [
   },
 ];
 
+const works = [
+  { id: 1, title: "Интерактивное задание №1", type: "Упражнение", url: "https://learningapps.org/watch?v=phcyuus8n26" },
+  { id: 2, title: "Интерактивное задание №2", type: "Упражнение", url: "https://learningapps.org/watch?v=ppkn6c80a26" },
+  { id: 3, title: "Интерактивное задание №3", type: "Упражнение", url: "https://learningapps.org/watch?v=pxff6xs2v26" },
+  { id: 4, title: "Кто хочет стать Сталионнером?", type: "Викторина", url: "https://learningapps.org/watch?v=pymb6ki6526" },
+  { id: 5, title: "Интерактивное задание №5", type: "Упражнение", url: "https://learningapps.org/watch?v=pugg1rwcn26" },
+  { id: 6, title: "Интерактивное задание №6", type: "Упражнение", url: "https://learningapps.org/watch?v=pnqv9ycp326" },
+  { id: 7, title: "Интерактивное задание №7", type: "Упражнение", url: "https://learningapps.org/watch?v=pudmqwcwn26" },
+  { id: 8, title: "Интерактивное задание №8", type: "Упражнение", url: "https://learningapps.org/watch?v=peb2w67i526" },
+  { id: 9, title: "Правильная хронология событий", type: "Хронология", url: "https://learningapps.org/watch?v=pkmwh3w7j26" },
+  { id: 10, title: "Найди пару", type: "Соотнеси событие и дату", url: "https://learningapps.org/watch?v=px8rf4p4t26" },
+];
+
 const stats = [
   { value: "15+", label: "лет опыта" },
   { value: "800+", label: "учеников" },
@@ -77,7 +90,7 @@ const stats = [
 ];
 
 export default function Index() {
-  const [activeSection, setActiveSection] = useState<"home" | "achievements">("home");
+  const [activeSection, setActiveSection] = useState<"home" | "achievements" | "works">("home");
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
@@ -116,6 +129,17 @@ export default function Index() {
             }
           >
             Достижения
+          </button>
+          <button
+            onClick={() => setActiveSection("works")}
+            className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
+            style={
+              activeSection === "works"
+                ? { background: "#E8533A", color: "#FDF6EC" }
+                : { background: "transparent", color: "#1A1209" }
+            }
+          >
+            Работы
           </button>
         </div>
       </nav>
@@ -393,6 +417,87 @@ export default function Index() {
               >
                 Написать мне
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* WORKS SECTION */}
+      {activeSection === "works" && (
+        <div className="pt-24 px-8 lg:px-20 pb-20">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 animate-fade-in">
+              <div
+                className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4"
+                style={{ background: "#CCEFEF", color: "#2A7B7C" }}
+              >
+                ✦ Интерактивные задания
+              </div>
+              <h1
+                className="font-cormorant text-6xl lg:text-7xl font-bold mb-4"
+                style={{ color: "#1A1209" }}
+              >
+                Мои <span style={{ color: "#2A7B7C", fontStyle: "italic" }}>работы</span>
+              </h1>
+              <p className="text-lg max-w-xl mx-auto" style={{ color: "#4A3728" }}>
+                Интерактивные задания для подготовки к урокам истории
+              </p>
+            </div>
+
+            {/* Works grid */}
+            <div className="grid lg:grid-cols-2 gap-5">
+              {works.map((work, i) => (
+                <a
+                  key={work.id}
+                  href={work.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-5 p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                  style={{
+                    background: "white",
+                    borderColor: "#E8D5C4",
+                    textDecoration: "none",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#2A7B7C";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 48px rgba(42,123,124,0.15)";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.borderColor = "#E8D5C4";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                  }}
+                >
+                  {/* Number */}
+                  <div
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 font-cormorant text-xl font-bold transition-all duration-300"
+                    style={{ background: "#CCEFEF", color: "#2A7B7C" }}
+                  >
+                    {work.id}
+                  </div>
+
+                  {/* Info */}
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs font-medium mb-1" style={{ color: "#8B7355" }}>
+                      {work.type}
+                    </div>
+                    <div
+                      className="font-semibold text-base leading-snug truncate"
+                      style={{ color: "#1A1209" }}
+                    >
+                      {work.title}
+                    </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div
+                    className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group-hover:translate-x-1"
+                    style={{ background: "#F5C5B0" }}
+                  >
+                    <Icon name="ArrowRight" size={16} style={{ color: "#E8533A" }} />
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
