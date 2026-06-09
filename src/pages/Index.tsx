@@ -80,6 +80,10 @@ const works = [
   { id: 8, title: "Интерактивное задание №8", type: "Упражнение", url: "https://learningapps.org/watch?v=peb2w67i526" },
   { id: 9, title: "Правильная хронология событий", type: "Хронология", url: "https://learningapps.org/watch?v=pkmwh3w7j26" },
   { id: 10, title: "Найди пару", type: "Соотнеси событие и дату", url: "https://learningapps.org/watch?v=px8rf4p4t26" },
+  { id: 11, title: "Инструменты контроля и оценки образовательных результатов", type: "Банк тестов", url: "http://banktestov.ru/test/113454" },
+  { id: 12, title: "Сталинизм", type: "Online Test", url: "http://onlinetestpad.com/a45c5mlb6wex2" },
+  { id: 13, title: "Инструменты контроля и оценки образовательных результатов", type: "Яндекс Формы", url: "https://anketolog.ru/rs/1031710/H4NxLDTo" },
+  { id: 14, title: "Тест", type: "1С:Урок", url: "https://urok.1c.ru/constructor/qti/431002.phd" },
 ];
 
 const photos = [
