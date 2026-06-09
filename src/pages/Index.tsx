@@ -254,60 +254,31 @@ export default function Index() {
 
           {/* About */}
           <section className="py-20 px-8 lg:px-20">
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <div
-                  className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6"
-                  style={{ background: "#CCEFEF", color: "#2A7B7C" }}
-                >
-                  О себе
-                </div>
-                <h2
-                  className="font-cormorant text-5xl font-bold mb-6 leading-tight"
-                  style={{ color: "#1A1209" }}
-                >
-                  История — это
-                  <br />
-                  <span style={{ color: "#2A7B7C", fontStyle: "italic" }}>
-                    диалог с прошлым
-                  </span>
-                </h2>
-                <p className="text-base leading-relaxed mb-4" style={{ color: "#4A3728" }}>
-                  Я убеждена, что каждый ребёнок способен полюбить историю — нужен лишь правильный
-                  подход. Мои уроки строятся на живых историях, дискуссиях и открытиях.
-                </p>
-                <p className="text-base leading-relaxed" style={{ color: "#4A3728" }}>
-                  Выпускница МПГУ, кандидат педагогических наук. Автор методики
-                  «История через судьбы», которую используют более 50 школ страны.
-                </p>
+            <div className="max-w-3xl mx-auto text-center">
+              <div
+                className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6"
+                style={{ background: "#CCEFEF", color: "#2A7B7C" }}
+              >
+                О себе
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: "BookOpen", label: "Авторские программы", desc: "3 методики обучения" },
-                  { icon: "Users", label: "Работа с классом", desc: "До 30 учеников" },
-                  { icon: "Brain", label: "Олимпиадная подготовка", desc: "ВОШ и ЕГЭ по истории" },
-                  { icon: "Heart", label: "Индивидуальный подход", desc: "К каждому ребёнку" },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="p-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:shadow-md"
-                    style={{ borderColor: "#E8D5C4", background: "white" }}
-                  >
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-3"
-                      style={{ background: "#FEF3C7" }}
-                    >
-                      <Icon name={item.icon} size={20} style={{ color: "#F2A730" }} />
-                    </div>
-                    <div className="font-semibold text-sm mb-1" style={{ color: "#1A1209" }}>
-                      {item.label}
-                    </div>
-                    <div className="text-xs" style={{ color: "#8B7355" }}>
-                      {item.desc}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <h2
+                className="font-cormorant text-5xl font-bold mb-6 leading-tight"
+                style={{ color: "#1A1209" }}
+              >
+                История — это
+                <br />
+                <span style={{ color: "#2A7B7C", fontStyle: "italic" }}>
+                  диалог с прошлым
+                </span>
+              </h2>
+              <p className="text-base leading-relaxed mb-4" style={{ color: "#4A3728" }}>
+                Я убеждена, что каждый ребёнок способен полюбить историю — нужен лишь правильный
+                подход. Мои уроки строятся на живых историях, дискуссиях и открытиях.
+              </p>
+              <p className="text-base leading-relaxed" style={{ color: "#4A3728" }}>
+                Выпускница ТОГУ, кандидат педагогических наук. Автор методики
+                «История через судьбы», которую используют более 50 школ страны.
+              </p>
             </div>
           </section>
         </div>
