@@ -17,7 +17,7 @@ const achievements = [
     year: "2023",
     title: "Лучший наставник",
     category: "Всероссийская олимпиада",
-    description: "Подготовила 5 призёров Всероссийской олимпиады по математике.",
+    description: "Подготовила 5 призёров Всероссийской олимпиады по истории.",
     icon: "Star",
     color: "#E8533A",
     bg: "#FFE8E3",
@@ -35,7 +35,7 @@ const achievements = [
     year: "2021",
     title: "Грант «Образование»",
     category: "Министерство образования",
-    description: "Получила федеральный грант на разработку цифровых учебных материалов.",
+    description: "Получила федеральный грант на разработку цифровых учебных материалов по истории.",
     icon: "Award",
     color: "#8B5CF6",
     bg: "#EDE9FE",
@@ -64,7 +64,7 @@ const stats = [
   { value: "15+", label: "лет опыта" },
   { value: "800+", label: "учеников" },
   { value: "30+", label: "наград" },
-  { value: "98%", label: "сдают ЕГЭ" },
+  { value: "98%", label: "сдают ОГЭ/ЕГЭ" },
 ];
 
 export default function Index() {
@@ -83,7 +83,7 @@ export default function Index() {
         }}
       >
         <div className="font-cormorant text-2xl font-bold" style={{ color: "#1A1209" }}>
-          <span style={{ color: "#E8533A" }}>А</span>нна Петрова
+          <span style={{ color: "#E8533A" }}>А</span>лёна Усова
         </div>
         <div className="flex gap-2">
           <button
@@ -149,19 +149,19 @@ export default function Index() {
                   style={{ background: "#F5C5B0", color: "#E8533A" }}
                 >
                   <Icon name="GraduationCap" size={16} />
-                  Учитель математики · Высшая категория
+                  Учитель истории · Высшая категория
                 </div>
                 <h1
                   className="font-cormorant text-7xl lg:text-8xl font-bold leading-none mb-4"
                   style={{ color: "#1A1209" }}
                 >
-                  Анна
+                  Алёна
                   <br />
-                  <span style={{ color: "#E8533A", fontStyle: "italic" }}>Петрова</span>
+                  <span style={{ color: "#E8533A", fontStyle: "italic" }}>Усова</span>
                 </h1>
                 <p className="text-lg leading-relaxed mb-8 max-w-md" style={{ color: "#4A3728" }}>
-                  Превращаю сложную математику в увлекательное путешествие. 15 лет открываю детям
-                  красоту чисел и логики.
+                  Превращаю историю в захватывающее путешествие сквозь века. 15 лет открываю детям
+                  красоту прошлого и смысл настоящего.
                 </p>
                 <div className="flex gap-4 flex-wrap">
                   <button
@@ -189,7 +189,7 @@ export default function Index() {
                   />
                   <img
                     src={TEACHER_PHOTO}
-                    alt="Анна Петрова"
+                    alt="Алёна Алексеевна Усова"
                     className="relative rounded-[32px] object-cover"
                     style={{ width: 380, height: 460, filter: "saturate(1.1)" }}
                   />
@@ -266,26 +266,26 @@ export default function Index() {
                   className="font-cormorant text-5xl font-bold mb-6 leading-tight"
                   style={{ color: "#1A1209" }}
                 >
-                  Математика — это
+                  История — это
                   <br />
                   <span style={{ color: "#2A7B7C", fontStyle: "italic" }}>
-                    искусство мышления
+                    диалог с прошлым
                   </span>
                 </h2>
                 <p className="text-base leading-relaxed mb-4" style={{ color: "#4A3728" }}>
-                  Я убеждена, что каждый ребёнок способен понять математику — нужен лишь правильный
-                  подход. Мои уроки строятся на любопытстве, игре и открытиях.
+                  Я убеждена, что каждый ребёнок способен полюбить историю — нужен лишь правильный
+                  подход. Мои уроки строятся на живых историях, дискуссиях и открытиях.
                 </p>
                 <p className="text-base leading-relaxed" style={{ color: "#4A3728" }}>
-                  Выпускница МГУ, кандидат педагогических наук. Автор методики «Математика через
-                  жизнь», которую используют более 50 школ страны.
+                  Выпускница МПГУ, кандидат педагогических наук. Автор методики
+                  «История через судьбы», которую используют более 50 школ страны.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: "BookOpen", label: "Авторские программы", desc: "3 методики обучения" },
                   { icon: "Users", label: "Работа с классом", desc: "До 30 учеников" },
-                  { icon: "Brain", label: "Олимпиадная подготовка", desc: "ВОШ и ЕГЭ" },
+                  { icon: "Brain", label: "Олимпиадная подготовка", desc: "ВОШ и ЕГЭ по истории" },
                   { icon: "Heart", label: "Индивидуальный подход", desc: "К каждому ребёнку" },
                 ].map((item, i) => (
                   <div
@@ -421,7 +421,7 @@ export default function Index() {
       {/* Footer */}
       <footer className="py-8 px-8 text-center border-t" style={{ borderColor: "#E8D5C4" }}>
         <p className="text-sm" style={{ color: "#8B7355" }}>
-          © 2024 Анна Петрова · Учитель математики
+          © 2024 Алёна Алексеевна Усова · Учитель истории
         </p>
       </footer>
     </div>
