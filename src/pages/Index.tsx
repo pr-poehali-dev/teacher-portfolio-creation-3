@@ -82,6 +82,29 @@ const works = [
   { id: 10, title: "Найди пару", type: "Соотнеси событие и дату", url: "https://learningapps.org/watch?v=px8rf4p4t26" },
 ];
 
+const photos = [
+  {
+    title: "ЗОЖ — это здорово! Схема привычек",
+    type: "Интеллект-карта",
+    img: "https://cdn.poehali.dev/projects/6f969e72-c557-47bc-ba79-e3eb6c789a9d/bucket/931ee4a6-8243-4e1f-bc09-2e4521203639.jpg",
+  },
+  {
+    title: "ЗОЖ — утро и день: простые привычки",
+    type: "Брошюра",
+    img: "https://cdn.poehali.dev/projects/6f969e72-c557-47bc-ba79-e3eb6c789a9d/bucket/23b160d2-63c7-41be-be8c-3f243ae73d29.jpg",
+  },
+  {
+    title: "ЗОЖ — вечер: отдыхай правильно",
+    type: "Брошюра",
+    img: "https://cdn.poehali.dev/projects/6f969e72-c557-47bc-ba79-e3eb6c789a9d/bucket/d71be703-85de-49f3-b0c4-667ead7e7950.jpg",
+  },
+  {
+    title: "QR-код для учеников",
+    type: "QR-код",
+    img: "https://cdn.poehali.dev/projects/6f969e72-c557-47bc-ba79-e3eb6c789a9d/bucket/e37a50df-a596-4489-b4ca-c1b422e932bb.jpg",
+  },
+];
+
 const stats = [
   { value: "15+", label: "лет опыта" },
   { value: "800+", label: "учеников" },
@@ -445,7 +468,49 @@ export default function Index() {
               </p>
             </div>
 
+            {/* Photos grid */}
+            <div className="mb-10">
+              <h2 className="font-cormorant text-3xl font-bold mb-6" style={{ color: "#1A1209" }}>
+                Методические материалы
+              </h2>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                {photos.map((photo, i) => (
+                  <div
+                    key={i}
+                    className="group rounded-2xl overflow-hidden border transition-all duration-300 hover:scale-[1.03] hover:shadow-xl cursor-pointer"
+                    style={{ borderColor: "#E8D5C4" }}
+                    onClick={() => window.open(photo.img, "_blank")}
+                  >
+                    <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                      <img
+                        src={photo.img}
+                        alt={photo.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                        style={{ background: "rgba(26,18,9,0.45)" }}
+                      >
+                        <Icon name="ZoomIn" size={28} style={{ color: "#FDF6EC" }} />
+                      </div>
+                    </div>
+                    <div className="p-3" style={{ background: "white" }}>
+                      <div className="text-xs font-medium mb-1" style={{ color: "#8B7355" }}>
+                        {photo.type}
+                      </div>
+                      <div className="text-sm font-semibold leading-snug" style={{ color: "#1A1209" }}>
+                        {photo.title}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Works grid */}
+            <h2 className="font-cormorant text-3xl font-bold mb-6" style={{ color: "#1A1209" }}>
+              Интерактивные задания
+            </h2>
             <div className="grid lg:grid-cols-2 gap-5">
               {works.map((work, i) => (
                 <a
